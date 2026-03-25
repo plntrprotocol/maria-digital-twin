@@ -6,7 +6,7 @@
     <title>Maria Simulation - Digital Twin (2D)</title>
     
     <script src="phaser.min.js?v=20260324"></script>
-    <script src="colyseus.js?v=20260324"></script>
+    <script src="https://unpkg.com/colyseus.js@0.17.8/dist/colyseus.min.js"></script>
 
     <style>
         body { margin: 0; padding: 0; overflow: hidden; background-color: #1a1a2e; color: white; font-family: 'Courier New', Courier, monospace; }
@@ -28,7 +28,7 @@
     <div id="game-container"></div>
 
     <script>
-        const client = new Colyseus.Client('wss://maria-simulation-production.up.railway.app');
+        const client = new Colyseus.Client('wss://maria-simulation-production.up.railway.app:432');
         let room;
 
         const config = {
